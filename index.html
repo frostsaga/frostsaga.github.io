@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>editorial system</title>
+
+<style>
+body {
+  margin: 0;
+  background: #f5efe8;
+  color: #2b1b1b;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, #f2b6c6, transparent 45%),
+    radial-gradient(circle at 80% 30%, #7a0f1f, transparent 45%),
+    radial-gradient(circle at 50% 80%, #ffffff, transparent 60%);
+  filter: blur(90px);
+  opacity: 0.55;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png");
+  background-size: 220px;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.03),
+    rgba(0,0,0,0.03) 1px,
+    transparent 4px,
+    transparent 6px
+  );
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Arial Black, sans-serif;
+  color: #7a0f1f;
+  font-size: 2.6rem;
+  margin: 0;
+  transition: 0.2s ease;
+}
+
+h1:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px #f2b6c6;
+}
+
+.status {
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(122,15,31,0.15);
+  border-radius: 16px;
+  padding: 18px;
+  transition: 0.18s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 18px rgba(242,182,198,0.35);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #7a0f1f;
+}
+
+.card p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-top: 8px;
+}
+
+.links {
+  margin-top: 60px;
+  font-family: "Courier New", monospace;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #7a0f1f;
+  transition: 0.2s ease;
+}
+
+.links a:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px #f2b6c6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="noise"></div>
+<div class="scanlines"></div>
+
+<div class="wrap">
+
+  <h1>frostsaga</h1>
+
+  <div class="status">
+    editorial system / status: exploring / active development
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>projects</h3>
+      <p>personal landing page system, github setup, and ongoing portfolio development.</p>
+    </div>
+
+    <div class="card">
+      <h3>learning</h3>
+      <p>html and css structure, javascript basics, responsive design, and github workflow.</p>
+    </div>
+
+    <div class="card">
+      <h3>experiments</h3>
+      <p>layout testing, hover animations, UI structure studies, and visual styling trials.</p>
+    </div>
+
+    <div class="card">
+      <h3>current focus</h3>
+      <p>building a consistent personal web identity and improving front-end fundamentals.</p>
+    </div>
+
+  </div>
+
+  <div class="links">
+    <a href="https://github.com/frostsaga" target="_blank">github</a>
+    <a href="mailto:kshawrysh@gmail.com">contact</a>
+  </div>
+
+</div>
+
+</body>
+</html>
